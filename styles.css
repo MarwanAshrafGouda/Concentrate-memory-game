@@ -1,0 +1,162 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    text-align: center;
+    background: linear-gradient(to bottom right, navy,white);
+}
+header, nav, section, aside, footer{
+    display: block;
+}
+#workspace {
+    width: 1220px;
+    border: 1px solid black;
+    margin: 20px auto;
+    text-align: left;
+    border-radius: 10px;
+}
+header {
+    padding: 14px;
+    font-family: cursive;
+    background: linear-gradient(to top right,darkgrey,black) ; 
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 50px;
+    color: whitesmoke;
+}
+nav{
+    padding: 6px;
+    background-color: beige;
+}
+li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li > a:link{
+    text-decoration: none;
+    color: darkslategrey;
+}
+li > a:visited{
+    text-decoration: none;
+    color: darkslategrey;
+}
+li > a:hover{
+    font-size: 19px;
+}
+#container{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+#card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;    
+}
+#container:hover{
+    width: 148px;
+    height: 148px;
+}
+#backside{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: midnightblue;
+}
+#frontside{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.inactive{
+    display: none;
+}
+.enabled > .flipped{
+    transform:rotateY(180deg);
+}
+.vanish{
+    position: static;
+    transform-origin: center center;
+    transform: rotate(360deg);
+    width: 0px;
+    height: 0px;    
+    transition: all 1s ease;
+    transition-delay: 0.5s;
+    pointer-events: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.disabled{
+    pointer-events: none;
+}
+section{
+    float: left;
+    width: 900px;
+    padding: 10px;
+}
+aside {
+    float: left;
+    width: 260px;
+    padding:100px 20px 20px 20px;;
+}
+aside > button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    background: linear-gradient(to right, gray, white, gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: dimgray;
+    font-size: 16px;
+}
+aside > button.enabled:hover{
+    width: 99%;
+}
+aside > select {
+    width: 100%;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    margin-bottom: 100px;
+    background-color: ivory;
+    color: darkslateblue;
+}
+aside > h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    color: aqua;
+    margin-bottom: 20px;
+}
+label{
+    font-family: cursive;
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    padding-right: 40%;
+    color: darkred;
+    background: linear-gradient(to bottom right, dimgrey, white);
+}
+footer {
+    clear: both;
+    background-color: darkgray; 
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
