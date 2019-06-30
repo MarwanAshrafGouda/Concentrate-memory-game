@@ -112,7 +112,6 @@ function cardFlipping(){
                 flippedCards[0].className = flippedCards[1].className = 'unflipped';
             }
             this.className = "flipped";
-            flips++;
             var flippedCards = document.querySelectorAll('.flipped');
             if(flippedCards.length == 2){
                 var cardFaces = flippedCards[0].children;
