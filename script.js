@@ -124,7 +124,11 @@ function cardFlipping(){
                     frontImageFirst[0].className = 'vanish';
                     frontImageSecond[0].className = 'vanish';
                     setTimeout(function(){flippedCards[0].style.display = 'none';},1500);
-                    setTimeout(function(){flippedCards[1].style.display = 'none';},1500);
+                    setTimeout(function(){flippedCards[1].style.display = 'none';},1500);                    
+                    if(document.querySelectorAll('.active * .unvanished').length == 0){
+                        document.getElementById("solve").click();
+                        alert("You've matched all the pairs!");
+                    }
                 }
             }
          }
